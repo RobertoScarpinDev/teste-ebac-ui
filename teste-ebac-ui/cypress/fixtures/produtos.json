@@ -1,0 +1,24 @@
+[
+   {
+     "nomeProduto":"Atlas Fitness Tank", 
+     "tamanho": "XL", 
+     "cor": "Blue", 
+     "quantidade": 3
+    },
+
+    {
+     "nomeProduto":"Helena Hooded Fleece", 
+     "tamanho": "M", 
+     "cor": "Yellow", 
+     "quantidade": 5
+    },
+
+    {
+     "nomeProduto":"Geo Insulated Jogging Pant", 
+     "tamanho": "36", 
+     "cor": "Red",
+     "quantidade": 10
+    }
+
+    
+]
