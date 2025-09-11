@@ -13,7 +13,7 @@ describe('Funcionalidade: Produtos', () => {
         
     });
 
-    it.only('Deve buscar um produto com sucesso', () => {
+    it('Deve buscar um produto com sucesso', () => {
         let Produto = 'Autumn Pullie'  
         produtosPage.buscarProduto(Produto)
         cy.get('.product_title').should('contain', Produto)
