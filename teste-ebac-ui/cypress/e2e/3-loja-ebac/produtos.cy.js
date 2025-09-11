@@ -1,20 +1,29 @@
 /// <reference types="cypress"/>
+ import produtosPage from "../../support/page-objects/produtos.page";
 
 describe('Funcionalidade: Produtos', () => {
 
     beforeEach(() => {
-        cy.visit('produtos')
+        produtosPage.visitarUrl()
     });
 
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.product-block')
-           /// .first()
-           ///.last()
-           ///.eq(2)
-           .contains('Ariel Roll Sleeve Sweatshirt')
-            .click()
+         produtosPage.buscarProdutoLista ('Abominable Hoodie')      
+          cy.get('#tab-title-description > a').should('contain' , 'Descrição')
+        
+    });
 
-            cy.get('#tab-title-description > a').should('contain' , 'Descrição')
+    it.only('Deve buscar um produto com sucesso', () => {
+        let Produto = 'Autumn Pullie'  
+        produtosPage.buscarProduto(Produto)
+        cy.get('.product_title').should('contain', Produto)
+    });
+
+    it('Deve visitar a pagina do produto', () => {
+        
+    });
+
+    it('Deve adicionar produto ao carrinho', () => {
         
     });
 });
